@@ -1,0 +1,17 @@
+.formulario .salvar {
+    background: black;
+    color: white;
+    position: absolute;
+
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+
+
+display: flex;
+align-items: center;
+text-align: center;
+
+}

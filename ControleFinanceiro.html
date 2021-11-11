@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <Title> Controle Financeiro </Title>
+    <link rel="stylesheet" href="./assets/formulario.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/img/elipse.png" ;style="
+            position: absolute;
+            width: 30px;
+            height: 27.63px;
+            left: 22px;
+            top: 15px;
+            border: 2px solid #333333;">
+    </header>
+    <section class="formulario">
+        Tipo de transação
+        <select name="TipoTransação">
+            <option value="Venda">Venda</option>
+            <option value="Compra" selected>Compra</option>
+        </select>
+        </br>
+        Nome da Mercadoria
+        <input type="text" ; name="NomeDaMercadoria">
+        </br>
+        <input type="number" step="0.01" min="0" >
+
+        <input type="submit" ; class="salvar" ; value="Salvar transação">
+    </section>
+</body>
+
+</html>
