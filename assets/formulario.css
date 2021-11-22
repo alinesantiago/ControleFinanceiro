@@ -1,17 +1,49 @@
 .formulario .salvar {
-    background: black;
+    background: #333333;
+    border-radius: 4px;
     color: white;
+}
+
+.formulario{
+    display: inline-block;
     position: absolute;
+    width: 400px;
+    height: 344px;
+    left: calc(50% - 400px/2);
+    top: calc(50% - 344px/2);
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+}
 
+.tipo{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 60.78%;
+    font-size: 14px;
+    line-height: 22px
+   
+}
+.adicionar{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #333333;
+    border-radius: 4px;
+}
 
-font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-
-
-display: flex;
-align-items: center;
-text-align: center;
-
+#campos{
+height: 32px;
+left: 0px;
+right: 0.2px;
+top: 24px;
+background: #FFFFFF;
+border: 1px solid #979797;
+box-sizing: border-box;
+border-radius: 4px;
 }

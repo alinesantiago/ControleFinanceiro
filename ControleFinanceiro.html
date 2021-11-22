@@ -3,33 +3,46 @@
 <head>
     <Title> Controle Financeiro </Title>
     <link rel="stylesheet" href="./assets/formulario.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="./assets/img/elipse.png" ;style="
-            position: absolute;
-            width: 30px;
-            height: 27.63px;
-            left: 22px;
-            top: 15px;
-            border: 2px solid #333333;">
+        <img src="./assets/img/elipse.png" ; style="margin-left: 200px; margin-top: 22px; margin-right: 1260px;">
+        <div class=" controlefinanceiro" style="left: 260px;right: 829px;"> Controle Financeiro </div>
     </header>
+
     <section class="formulario">
-        Tipo de transação
-        <select name="TipoTransação">
+        <b>Nova transação</b>
+        <div id="tipo">Tipo de transação</div>
+        <select name="TipoTransação" id="campos">
             <option value="Venda">Venda</option>
             <option value="Compra" selected>Compra</option>
         </select>
-        </br>
-        Nome da Mercadoria
-        <input type="text" ; name="NomeDaMercadoria">
-        </br>
-        <input type="number" step="0.01" min="0" >
 
-        <input type="submit" ; class="salvar" ; value="Salvar transação">
+        <div id="tipo">Nome da Mercadoria</div>
+        <input type="text" ; placeholder="Input" ; name="NomeDaMercadoria" id="campos">
+
+        <div id="tipo">Valor</div>
+        <input type="text" ; placeholder="R$ 0,00" name="NomeDaMercadoria" id="campos">
+        <p>
+
+            <input type="submit" ; class="adicionar" ; value="Adicionar transação" id="campos">
     </section>
+
+    <!-- <div class="menu-hamburguer"> -->
+
+        <section class="transacoes">
+            <b>Extrato de transações</b>
+            <table>
+                Fazer tabela aqui
+            </table>
+        </section>
+    </div>
 </body>
 
 </html>
