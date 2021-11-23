@@ -11,14 +11,15 @@
     height: 344px;
     left: calc(50% - 400px/2);
     top: calc(50% - 344px/2);
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
     
 }
 
-.tipo{
+.novatransacao{
+    background-color: white;
     position: absolute;
     left: 0%;
     right: 0%;
@@ -26,15 +27,17 @@
     bottom: 60.78%;
     font-size: 14px;
     line-height: 22px
+
    
 }
-.adicionar{
+  .adicionar{
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 0%;
     background: #333333;
     border-radius: 4px;
+    color: white;
 }
 
 #campos{
@@ -42,8 +45,13 @@ height: 32px;
 left: 0px;
 right: 0.2px;
 top: 24px;
-background: #FFFFFF;
 border: 1px solid #979797;
 box-sizing: border-box;
+height: 32px;
+width: 370px;
+left: 0px;
+top: 24px;
 border-radius: 4px;
+
 }
+
