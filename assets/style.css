@@ -9,30 +9,33 @@ body{
     font-family: 'Lato', 'sans-sefif';
 }
 
-header{ 
+.navigation{ 
     background: rgb(224,224,224);
-    height: 80px;
-    width: 100&; 
-}
-
-.logo{
-    margin-left: 200px;
-    width: 20%;
-    position: absolute;
-}
-.controlefinanceiro{
-    position: absolute;
-    width: 411px;
-    height: 43px;
-    left: 60px;
-    top: 19px;
-
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
     display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.controlefinanceiro{
+    font-size: 20px;
+    font-weight:bold;
+}
+    .menu{
+        display: flex;
+
+    }
+
+ .menu ul{
+    background-color: white;
+    display: flex;
+    width: 350px;
+    height: 40px;
+    font-weight: bold;
+    list-style: none;
+    justify-content: space-evenly;
     align-items: center;
 
 }
+

@@ -1,57 +1,40 @@
-.formulario .salvar {
-    background: #333333;
-    border-radius: 4px;
-    color: white;
-}
 
 .formulario{
-    display: inline-block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 400px;
     height: 344px;
-    left: calc(50% - 400px/2);
-    top: calc(50% - 344px/2);
+    justify-content: space-around;
     background: #ffffff;
     border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
+    padding-left: 14.09;
+    border-right-width: 1px;
+    border-top-width: 0px;
+    padding-right: 14.09px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
-}
-
-.novatransacao{
-    background-color: white;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 60.78%;
-    font-size: 14px;
-    line-height: 22px
-
-   
-}
-  .adicionar{
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background: #333333;
-    border-radius: 4px;
-    color: white;
-}
-
-#campos{
-height: 32px;
-left: 0px;
-right: 0.2px;
-top: 24px;
-border: 1px solid #979797;
-box-sizing: border-box;
-height: 32px;
-width: 370px;
-left: 0px;
-top: 24px;
-border-radius: 4px;
 
 }
 
+     input  {
+        height: 32px;
+        border: 1px solid #979797;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    .tipotransacao{
+        height: 32px;
+        border: 1px solid #979797;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    .adicionar{
+        background: #333333;
+        border-radius: 4px;
+        color: white;
+    }
