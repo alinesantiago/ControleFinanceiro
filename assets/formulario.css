@@ -2,6 +2,9 @@
 .formulario{
     display: flex;
     flex-direction: column;
+    position:relative;
+    top: 5%;
+    left: 10%;
     width: 400px;
     height: 344px;
     justify-content: space-around;
@@ -11,7 +14,7 @@
     border-radius: 4px;
     padding-left: 14.09;
     border-right-width: 1px;
-    border-top-width: 0px;
+    border-top-width: 0px; 
     padding-right: 14.09px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -19,14 +22,14 @@
 
 }
 
-     input  {
+     input {
         height: 32px;
         border: 1px solid #979797;
         box-sizing: border-box;
         border-radius: 4px;
     }
 
-    .tipotransacao{
+    .tipotransacao {
         height: 32px;
         border: 1px solid #979797;
         box-sizing: border-box;
@@ -38,3 +41,12 @@
         border-radius: 4px;
         color: white;
     }
+
+    select {
+        height: 32px;
+        border: 1px solid #979797;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+ 

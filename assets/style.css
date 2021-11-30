@@ -22,7 +22,7 @@ body{
     font-size: 20px;
     font-weight:bold;
 }
-    .menu{
+.menu{
         display: flex;
 
     }
@@ -30,12 +30,30 @@ body{
  .menu ul{
     background-color: white;
     display: flex;
+    position: relative;
     width: 350px;
     height: 40px;
     font-weight: bold;
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
+    right: 30%;
 
 }
+
+.extratodetransacoes {
+    font-size: 18px;
+    font-weight: bold;
+    
+
+}
+.extrato {
+    display: flex;
+    position: relative;
+    left: 73%;
+    top: -59%;
+}
+  
+}
+    
 
