@@ -7,14 +7,23 @@
 
 body{
     font-family: 'Lato', 'sans-sefif';
+
 }
 
-.navigation{ 
+.header{ 
     background: rgb(224,224,224);
     display: flex;
-    height: 80px;
     align-items: center;
     justify-content: space-between;
+  
+}
+.navigation{
+    position: relative;
+    height: 80px;
+    width: 400px;
+    left: 10%;
+    display: flex;
+    align-items: inherit;
   
 }
 
@@ -23,22 +32,21 @@ body{
     font-weight:bold;
 }
 .menu{
-        display: flex;
-
+    display: flex;
+    position: relative;
+    height: 40px;
+    right: 10%;
+    justify-content: space-evenly;
     }
 
  .menu ul{
     background-color: white;
     display: flex;
-    position: relative;
-    width: 350px;
-    height: 40px;
     font-weight: bold;
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
-    right: 30%;
-
+    width: 350px
 }
 
 .extratodetransacoes {
@@ -48,12 +56,12 @@ body{
 
 }
 .extrato {
-    display: flex;
     position: relative;
-    left: 73%;
-    top: -59%;
+    width: 680px;
+    left: 900px;
+    top: -330;
 }
   
-}
-    
 
+    
+aÇs 
