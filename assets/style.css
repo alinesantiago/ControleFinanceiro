@@ -15,18 +15,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px; 
   
 }
-.navigation{
-    position: relative;
-    height: 80px;
-    width: 400px;
-    left: 10%;
-    display: flex;
-    align-items: inherit;
   
 }
-
+.corpo{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+}
 .controlefinanceiro{
     font-size: 20px;
     font-weight:bold;
@@ -57,11 +55,8 @@ body{
 }
 .extrato {
     position: relative;
-    width: 680px;
-    left: 900px;
-    top: -330;
+
 }
   
 
     
-aÇs 

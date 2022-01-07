@@ -12,10 +12,8 @@
 
 <body>
     <header class="header">
-        <div class="navigation">
-            <div> <img src="./assets/img/elipse.png"> </div>
-            <div class="controlefinanceiro"> Controle financeiro </div>
-        </div>
+        <div> <img src="./assets/img/elipse.png"> </div>
+        <div class="controlefinanceiro"> Controle financeiro </div>
         <div class="menu">
             <ul>
                 <li>
@@ -28,59 +26,60 @@
         </div>
     </header>
 
-    <section class="formulario">
-        <b> Nova transação</b>
+    <div class="corpo">
+        <section class="formulario">
+            <b> Nova transação</b>
 
-        <div class="novatransacao"> Tipo de transação </div>
-        <select name="TipoTransação" class="novatransacao">
-            <option value="Venda">Venda</option>
-            <option value="Compra" selected>Compra</option>
-        </select>
+            <div class="novatransacao"> Tipo de transação </div>
+            <select name="TipoTransação" class="novatransacao">
+                <option value="Venda">Venda</option>
+                <option value="Compra" selected>Compra</option>
+            </select>
 
-        <div class="nomedamercadoria"> Nome da Mercadoria</div>
-        <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
+            <div class="nomedamercadoria"> Nome da Mercadoria</div>
+            <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
 
-        <div class="valor"> Valor</div>
-        <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
+            <div class="valor"> Valor</div>
+            <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
 
-        <input type="submit" ; class="adicionar" ; value="Adicionar transação">
+            <input type="submit" ; class="adicionar" ; value="Adicionar transação">
 
-    </section>
+        </section>
+        <div class="extrato">
+            <div class="extratodetransacoes"> Extrato de transações </div>
 
-    <div class="extrato">
-        <div class="extratodetransacoes"> Extrato de transações </div>
-        
-        <table class="infosextrato">
-            <tbody>
-                <tr style="font-weight: bold;">
-                    <td style="50%">
-                        Mercadoria
-                    </td>
-                    <td style="width: 50%;">
-                        Valor  
-                    </td>
-                </tr>
-                <hr style="width: 20px;">
-                <tr>
-                   <td> Lorem ipsum dolor sit amet consectetur</td> 
-                   <td> R$ 12.999,99 </td>
-                </tr>
-                <tr>
-                    <td> Quis nostrud exercitation</td> 
-                    <td> R$ 99,99</td>
-                 </tr>
-                 <tr>
-                    <td> Lorem ipsum </td> 
-                    <td> R$ 9,90</td>
-                 </tr>
-                 <tr style="font-weight: bold; ">
-                    <td> Total</td> 
-                    <td> R$ 12.900,00  </td>
-                 </tr>
-            </tbody>
-        </table>
+            <table class="infosextrato">
+                <thead style="font-weight: bold;">
+                    <tr>
+                        <td style="50%">
+                            Mercadoria
+                        </td>
+                        <td style="width: 50%;">
+                            Valor
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Lorem ipsum dolor sit amet consectetur</td>
+                        <td> R$ 12.999,99 </td>
+                    </tr>
+                    <tr>
+                        <td> Quis nostrud exercitation</td>
+                        <td> R$ 9999,99</td>
+                    </tr>
+                    <tr>
+                        <td> Lorem ipsum </td>
+                        <td> R$ 9,90</td>
+                    </tr>
+                    <tr style="font-weight: bold; ">
+                        <td> Total</td>
+                        <td> R$ 12.900,00 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
 </body>
 
 </html>
