@@ -1,85 +1,85 @@
-</html><html>
+</html>
+<html>
 
-    <head>
-        <Title> Controle Financeiro </Title>
-        <link rel="stylesheet" href="./assets/formulario.css">
-        <link rel="stylesheet" href="./assets/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    </head>
-    
-    <body>
-        <header class="header">
-            <div> <img src="./assets/img/elipse.png"> </div>
-            <div class="controlefinanceiro"> Controle financeiro </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        Cadastro de transações
-                    </li>
-                    <li>
-                        Limpar dados
-                    </li>
-                </ul>
-            </div>
-        </header>
-    
-        <div class="corpo">
-            <section class="formulario">
-                <b> Nova transação</b>
-    
-                <div class="novatransacao"> Tipo de transação </div>
-                <select name="TipoTransação" class="novatransacao">
-                    <option value="Venda">Venda</option>
-                    <option value="Compra" selected>Compra</option>
-                </select>
-    
-                <div class="nomedamercadoria"> Nome da Mercadoria</div>
-                <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
-    
-                <div class="valor"> Valor</div>
-                <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
-    
-                <input type="submit" ; class="adicionar" ; value="Adicionar transação">
-    
-            </section>
-            <div class="extrato">
-                <div class="extratodetransacoes"> Extrato de transações </div>
-    
-                <table class="infosextrato">
-                    <thead style="font-weight: bold;">
-                        <tr>
-                            <td style="50%">
-                                Mercadoria
-                            </td>
-                            <td style="width: 50%;">
-                                Valor
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> Lorem ipsum dolor sit amet consectetur</td>
-                            <td> R$ 12.999,99 </td>
-                        </tr>
-                        <tr>
-                            <td> Quis nostrud exercitation</td>
-                            <td> R$ 9999,99</td>
-                        </tr>
-                        <tr>
-                            <td> Lorem ipsum </td>
-                            <td> R$ 9,90</td>
-                        </tr>
-                        <tr style="font-weight: bold; ">
-                            <td> Total</td>
-                            <td> R$ 12.900,00 </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<head>
+    <Title> Controle Financeiro </Title>
+    <link rel="stylesheet" href="./assets/formulario.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header" style="width: 100%;">
+        <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
+        <div class="controlefinanceiro"> Controle financeiro </div>
+        <div class="menu">
+            <div class="cadastro">Cadastro de transações</div>
+            <div class="divisor">|</div>
+            <div class="limpar">Limpar dados</div>
         </div>
-    </body>
-    
-    </html>
+        </div>
+    </header>
+
+    <div class="corpo">
+        <section class="formulario">
+            <b> Nova transação</b>
+
+            <div class="novatransacao"> Tipo de transação </div>
+            <select name="TipoTransação" class="novatransacao">
+                <option value="Venda">Venda</option>
+                <option value="Compra" selected>Compra</option>
+            </select>
+
+            <div class="nomedamercadoria"> Nome da Mercadoria</div>
+            <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
+
+            <div class="valor"> Valor</div>
+            <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
+
+            <input type="submit" ; class="adicionar" ; value="Adicionar transação">
+
+        </section>
+        <div class="extrato">
+            <div class="extratodetransacoes"> Extrato de transações </div>
+
+            <table class="info.extrato" ; style="width: 680px;">
+                <tbody>
+                    <tr>
+                        <th class="table-mercadoria" style=" border-bottom:1px solid;">
+                            Mercadoria
+                        </th>
+                        <th class="table-valor" style=" border-bottom:1px solid;">
+                            Valor
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> + Lorem ipsum dolor sit amet
+                            consectetur</td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 12.999,99 </td>
+                    </tr>
+                    <tr>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> - Quis nostrud exercitation</td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 99,99</td>
+                    </tr>
+                    <tr>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> + Lorem ipsum </td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 9,99</td>
+
+                    </tr>
+                    <tr style="font-weight: bold; ">
+                        <td> Total</td>
+                        <td class="table-valor-total"> R$ 12.900,00 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>
