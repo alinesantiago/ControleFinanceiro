@@ -1,7 +1,7 @@
 .formulario{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    flex-basis: 400px;
     height: 344px;
     justify-content: space-around;
     background: #ffffff;
@@ -45,4 +45,9 @@
         border-radius: 4px;
     }
 
- 
+    @media screen and (max-width: 768px)  {
+        .formulario{
+            flex-direction: row;
+            height: 189px;
+        }
+      

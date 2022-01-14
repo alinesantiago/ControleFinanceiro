@@ -18,18 +18,20 @@ body{
     align-items: center;
     justify-content: space-between;
     height: 80px; 
+    flex-wrap: nowrap;
     
 }    
 
-
-.img-menu{
+.img-menu, .menu{
+    padding-left: 20px;
+    padding-right: 20px;
     
 }    
 
 .controlefinanceiro{
     font-size: 20px;
     font-weight:bold;
-    width: 30%;
+    
 }    
 
 .menu{
@@ -50,15 +52,11 @@ body{
     text-align: center;
 }    
 
-
-.infoextrato {
-    width: 60px
-    
-}    
-
 .table-valor{
     text-align: right;
     border-bottom:1px solid;"
+    width: 30%;
+    border-collapse: collapse;
 }    
 .table-valor-total, .table-total{
     text-align: right;
@@ -66,16 +64,17 @@ body{
 
 .table-mercadoria {
     text-align: left;
-    width: 231px;
+    width: 70%;
     
 }    
 
-.infoextrato{
+.info.extrato{
     border-bottom:1px solid;
+    border-collapse: collapse;
     padding-bottom: 8px;
-}    
-.infoextrato {
-    width: 680px;
+    flex-basis: 680px !important;
+    flex-grow: 0;
+
 }    
 
 .corpo{
@@ -83,38 +82,22 @@ body{
     justify-content: center;
     padding-top: 30px;
     gap: 20px;
+    margin: 20px;
 }
+
 
 @media screen and (max-width: 768px)  {
     .corpo{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 30px;
     }
-    .menu{
-        align-items: flex-end;
-        position: fixed;
-        top:0;
-        right:0;
-        flex-direction: column;
-        height: 100%;
-        background-color: #333;
-        color:white;
-    }
-    .divisor{
-        display: none;
-    }
-    
-    .menu{
-        justify-content: initial;
-        padding-top: 62px;
-    
-    }
-    
-    
-}
 
-
+        .formulario{
+            flex-direction: row;
+            height: 189px;
+        }
+      
 
 
 
