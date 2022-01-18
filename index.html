@@ -22,29 +22,40 @@
             <div class="divisor">|</div>
             <div class="limpar">Limpar dados</div>
         </div>
+        <div class="menu-hamburguer"> <img src=".assets/img/hamburguer.png" style="width: 20px;"> </div>
     </header>
 
     <div class="corpo">
         <section class="formulario">
-            <b> Nova transação</b>
 
-            <div class="novatransacao"> Tipo de transação </div>
-            <select name="TipoTransação" class="novatransacao">
-                <option value="Venda">Venda</option>
-                <option value="Compra" selected>Compra</option>
-            </select>
+            <b class="nova-transacao" style="padding-bottom: 10px;"> Nova transação</b>
+            <div class="campo">
+                <div class="novatransacao" style="padding-bottom: 10px;"> Tipo de transação </div>
+                <select name="TipoTransação" class="novatransacao">
+                    <option value="Venda">Venda</option>
+                    <option value="Compra" selected>Compra</option>
+                </select>
+            </div>
+            <div class="campo">
+                <div class="nomedamercadoria" style="padding-bottom: 10px;"> Nome da Mercadoria</div>
+                <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
+            </div>
 
-            <div class="nomedamercadoria"> Nome da Mercadoria</div>
-            <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
+            <div class="campo" style="padding-bottom: 10px;">
+                <div class="valor" style="padding-bottom: 10px;"> Valor</div>
+                <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
+            </div>
 
-            <div class="valor"> Valor</div>
-            <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
-
-            <input type="submit" ; class="adicionar" ; value="Adicionar transação">
+            <div class="campo" style="padding-bottom: 10px;">
+                <input type="submit" ; class="adicionar" ; value="Adicionar transação">
+            </div>
 
         </section>
+        
+        <div class="liner"><img src=".assets/img/line.png"></div>
+
         <div class="extrato">
-            <div class="extratodetransacoes"> Extrato de transações </div>
+            <!--<div class="extratodetransacoes"> Extrato de transações </div>-->
 
             <table class="info.extrato">
                 <tbody>
@@ -83,7 +94,7 @@
     </div>
 
 
-    
+
 </body>
 
 </html>

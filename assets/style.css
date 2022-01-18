@@ -16,7 +16,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 80px; 
     flex-wrap: nowrap;
     
@@ -34,6 +34,14 @@ body{
     
 }    
 
+.menu-hamburguer{
+    display: none;
+}
+
+.liner{
+    display: none;
+}
+
 .menu{
     display: flex;
     background:white; 
@@ -47,6 +55,7 @@ body{
 
 
 .extratodetransacoes {
+    width: 680px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -69,11 +78,12 @@ body{
 }    
 
 .info.extrato{
+    width: fill-available;
     border-bottom:1px solid;
     border-collapse: collapse;
     padding-bottom: 8px;
     flex-basis: 680px !important;
-    flex-grow: 0;
+    flex-grow: 1;
 
 }    
 
@@ -93,11 +103,150 @@ body{
         gap: 30px;
     }
 
-        .formulario{
+    .info.extrato{
+        width: 100% !important
+    }
+
+    .liner{
+        display: none;
+    }
+
+    .formulario{
             flex-direction: row;
             height: 189px;
+            width: 95%;
         }
       
+        .nova-transacao{
+            display: none;
+        }
+    
+        .menu-hamburguer{
+            display: block;
+        }
+      
+        .menu{
+            text-align: justify;
+            position: fixed;
+            justify-content: start;
+            top:0;
+            right:0;
+            flex-direction: column;
+            height: 100%;
+            background-color: #333;
+            color:white;
+            padding-left: 0px;
+            padding-right: 0px;
+            border-left-width: 0px;
+            margin-left: 0px;
+            width: 240px;
+    
+        }
+    
+        .cadastro, .limpar{
+         padding-left: 12px;;
+        width: 100%;
+        background-color: #333;
+        transition:All 1s ease;
+        -webkit-transition:All 1s ease;
+        -moz-transition:All 1s ease;
+        -o-transition:All 1s ease;
+            
+        }
+    
+        .fechar{
+            margin:20px;
+            padding-right: 82%;;
+        }
+    
+        .divisor{
+            display:none;
+        }
+        
+        .limpar:hover{
+            background-color: #C4C4C4;
+            color: black;
+          }
+    
+        
+        .cadastro:hover{
+            background-color: #C4C4C4;
+            color: black;
+          }
+    
+
+@media screen and (max-width: 411px)  {
+    .corpo{
+        display: flex;
+        gap: 30px;
+        padding-top: 0px;
+    }
+
+    .formulario{
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+        justify-content: space-evenly;
+    }
+
+    .nova-transacao{
+        display: none;
+    }
+
+    .menu-hamburguer{
+        display: block;
+    }
+  
+    .menu{
+        position: fixed;
+        justify-content: start;
+        top:0;
+        right:0;
+        flex-direction: column;
+        height: 100%;
+        background-color: #333;
+        color:white;
+        padding-left: 0px;
+        padding-right: 0px;
+        border-left-width: 0px;
+        margin-left: 0px;
+        width: 240px;
+        text-align: justify;
+    }
+
+    .cadastro, .limpar{
+    padding-left: 12px;;
+    width: 100%;
+    background-color: #333;
+    transition:All 1s ease;
+    -webkit-transition:All 1s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+        
+    }
+
+    .fechar{
+        margin:20px;
+        padding-right: 82%;
+
+    }
+
+    .divisor{
+        display:none;
+    }
+    
+    .limpar:hover{
+        background-color: #C4C4C4;
+        color: black;
+      }
+
+    
+    .cadastro:hover{
+        background-color: #C4C4C4;
+        color: black;
+      }
+
 
 
 
