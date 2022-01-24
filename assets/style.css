@@ -95,6 +95,13 @@ body{
     margin: 20px;
 }
 
+.divisor{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fechar{
+    display: none;
+}
 
 @media screen and (max-width: 768px)  {
     .corpo{
