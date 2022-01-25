@@ -111,7 +111,8 @@ body{
     }
 
     .info.extrato{
-        width: 100% !
+        width: 100%
+
     }
 
     .liner{
@@ -122,6 +123,10 @@ body{
             flex-direction: row;
             height: 189px;
             width: 95%;
+            flex-wrap: nowrap;
+            flex-basis: 189px;
+            flex-grow: 1;
+
         }
       
         .nova-transacao{
@@ -150,6 +155,11 @@ body{
     
         }
 
+        .campo{
+            padding-bottom: 10px;
+            height: fit-content;
+        }
+        
         .cadastro{
             padding-top: 11px;
         }
