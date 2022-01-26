@@ -55,7 +55,7 @@ body{
 
 
 .extratodetransacoes {
-    width: 680px;
+    flex-basis: 680px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -110,11 +110,6 @@ body{
         gap: 30px;
     }
 
-    .info.extrato{
-        width: 100%
-
-    }
-
     .liner{
         display: none;
     }
@@ -125,6 +120,7 @@ body{
             width: 95%;
             flex-wrap: wrap;
             flex-grow: 1;
+            flex-basis: 0;
 
         }
       
@@ -171,10 +167,9 @@ body{
 
         }
 
-        .adicionar{
+        .adicionar .campo3{
             width: 33%;
-
-            
+            margin-top: 10px
         }
         
         .cadastro{
@@ -220,7 +215,10 @@ body{
             color: black;
           }
     
-        
+          .info.extrato {
+            width: 100% !important;
+            flex-basis:669px;
+        }
 
 
 
@@ -237,6 +235,7 @@ body{
         padding-bottom: 0;
         border: none;
         justify-content: space-evenly;
+        flex-basis: 400px;
     }
 
     .nova-transacao{
@@ -268,6 +267,10 @@ body{
         width: 100%;
     }
     
+    .campo2{
+        width: 100%;
+    }
+
     .adicionar{
         width: 100%;
     }

@@ -22,7 +22,7 @@
             <div class="divisor">|</div>
             <div class="limpar">Limpar dados</div>
         </div>
-        <div class="menu-hamburguer"> <img src=".assets/img/hamburguer.png" style="width: 20px;"> </div>
+        <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
     </header>
 
     <div class="corpo">
@@ -30,23 +30,23 @@
 
             <b class="nova-transacao" style="padding-bottom: 10px;"> Nova transação</b>
             <div class="campo1">
-                <div class="novatransacao" id="minicampo" style="padding-bottom: 10px;"> Tipo de transação </div>
+                <div class="novatransacao" style="padding-bottom: 10px;"> Tipo de transação </div>
                 <select name="TipoTransação" class="novatransacao">
                     <option value="Venda">Venda</option>
                     <option value="Compra" selected>Compra</option>
                 </select>
             </div>
             <div class="campo2">
-                <div class="nomedamercadoria" id="campogrande" style="padding-bottom: 10px;"> Nome da Mercadoria</div>
+                <div class="nomedamercadoria" style="padding-bottom: 10px;"> Nome da Mercadoria</div>
                 <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
             </div>
 
-            <div class="campo1" id="minicampo" style="padding-bottom: 10px;">
+            <div class="campo1" style="padding-bottom: 10px;">
                 <div class="valor" style="padding-bottom: 10px;"> Valor</div>
                 <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
             </div>
 
-            <div class="campo" style="padding-bottom: 10px;">
+            <div class="campo3" style="padding-bottom: 10px;">
                 <input type="submit" ; class="adicionar" ; value="Adicionar transação">
             </div>
 
@@ -54,12 +54,11 @@
 
         <div class="liner"><img src=".assets/img/line.png"></div>
 
-        
+
 
         <div class="extrato">
-            <!--<div class="extratodetransacoes"> Extrato de transações </div>-->
-
-            <table class="info.extrato">
+            <h1 class="extratodetransacoes"> Extrato de transações </h1>
+            <table class="info.extrato" style="width: 100%;">
                 <tbody>
                     <tr>
                         <th class="table-mercadoria" style=" border-bottom:1px solid;">
