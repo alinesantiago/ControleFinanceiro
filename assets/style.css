@@ -123,8 +123,7 @@ body{
             flex-direction: row;
             height: 189px;
             width: 95%;
-            flex-wrap: nowrap;
-            flex-basis: 189px;
+            flex-wrap: wrap;
             flex-grow: 1;
 
         }
@@ -158,6 +157,24 @@ body{
         .campo{
             padding-bottom: 10px;
             height: fit-content;
+        }
+        
+        .campo1{
+            width: 25%;
+            height: fit-content;
+
+        }
+
+        .campo2{
+            width: 40%;
+            height: fit-content;
+
+        }
+
+        .adicionar{
+            width: 33%;
+
+            
         }
         
         .cadastro{
@@ -203,6 +220,9 @@ body{
             color: black;
           }
     
+        
+
+
 
 @media screen and (max-width: 411px)  {
     .corpo{
@@ -244,6 +264,14 @@ body{
         text-align: justify;
     }
 
+    .campo1 , .campo2 .adicionar{
+        width: 100%;
+    }
+    
+    .adicionar{
+        width: 100%;
+    }
+
     .cadastro{
         padding-top: 11px;
     }
@@ -274,17 +302,7 @@ body{
         display:none;
     }
     
-    .limpar:hover{
-        background-color: #C4C4C4;
-        color: black;
-      }
-
-    
-    .cadastro:hover{
-        background-color: #C4C4C4;
-        color: black;
-      }
-
+   
 
 
 

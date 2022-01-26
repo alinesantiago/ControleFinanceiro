@@ -54,6 +54,11 @@
         padding-bottom: 6px;
 
     }
+
+    .campo1 , .campo2 , .adicionar{
+        width: 100%;
+    }
+
     .formulario{
         padding-bottom: 20px;
     }
@@ -64,4 +69,18 @@
             height: 189px;
             flex-basis: ;
         }
+
+       
+        #minichampo{
+            width: calc(20% - 20px);
+            margin-top: 0;
+   
+             }
+   
+             #campoghrande{
+               width: calc(60% - 40px);
+               margin: 0;
+             }
+   
+    
       
