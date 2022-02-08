@@ -14,15 +14,17 @@
 <body>
 
     <header class="header" style="width: 100%;">
-        <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
-        <div class="controlefinanceiro"> Controle financeiro </div>
-        <div class="menu">
-            <div class="fechar"> <img src="./assets/img/fechar.png"></div>
-            <div class="cadastro">Cadastro de transações</div>
-            <div class="divisor">|</div>
-            <div class="limpar">Limpar dados</div>
+        <div style="width: 1100px;display: flex;justify-content: space-around;">
+            <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
+            <div class="controlefinanceiro"> Controle financeiro </div>
+            <div class="menu">
+                <div class="fechar"> <img src="./assets/img/fechar.png"></div>
+                <div class="cadastro">Cadastro de transações</div>
+                <div class="divisor">|</div>
+                <div class="limpar">Limpar dados</div>
+            </div>
+            <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
         </div>
-        <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
     </header>
 
     <div class="corpo">
@@ -58,34 +60,49 @@
 
         <div class="extrato">
             <h1 class="extratodetransacoes"> Extrato de transações </h1>
-            <table class="info.extrato" style="width: 100%;">
+            <table class="info.extrato" style="width: 100%" ; cellspacing="0">
                 <tbody>
-                    <tr>
+                    <tr style="border-bottom:1px solid;">
+                        <th class="table-valor" style=" border-bottom:1px solid;">
+                            
+                        </th>
                         <th class="table-mercadoria" style=" border-bottom:1px solid;">
                             Mercadoria
                         </th>
                         <th class="table-valor" style=" border-bottom:1px solid;">
-                            Valor
+                            
+                        </th>
+                        <th class="table-valor" style=" border-bottom:1px solid;">
+                           Valor
                         </th>
                     </tr>
 
                     <tr>
-                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> + Lorem ipsum dolor sit amet
+                        <td class="table-digito" style=" border-bottom:1px solid;"> + </td>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> Lorem ipsum dolor sit amet
                             consectetur</td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> </td>
                         <td class="table-valor" style=" border-bottom:1px solid;"> R$ 12.999,99 </td>
-                    </tr>
-                    <tr>
-                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> - Quis nostrud exercitation
-                        </td>
-                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 99,99</td>
-                    </tr>
-                    <tr>
-                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> + Lorem ipsum </td>
-                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 9,99</td>
 
                     </tr>
+                    <tr>
+                        <td class="table-digito" style=" border-bottom:1px solid;"> - </td>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> Quis nostrud exercitation
+                        </td>
+                        <td class="table-valor" style=" border-bottom:1px solid"; width="20px"> </td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 99,99 </td>
+
+                    </tr>
+                    <tr>
+                        <td class="table-digito" style=" border-bottom:1px solid;"> + </td>
+                        <td class="table-mercadoria" style=" border-bottom:1px solid;"> Lorem ipsum </td>
+                        <td class="table-valor" style=" border-bottom:1px solid;">  </td>
+                        <td class="table-valor" style=" border-bottom:1px solid;"> R$ 9,99 </td>
+                    </tr>
                     <tr style="font-weight: bold; ">
-                        <td> Total</td>
+                        <td>Total</td>
+                        <td> </td>
+                        <td> </td>
                         <td class="table-valor-total"> R$ 12.900,00 </td>
                     </tr>
                 </tbody>

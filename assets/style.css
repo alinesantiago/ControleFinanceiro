@@ -64,8 +64,9 @@ body{
 .table-valor{
     text-align: right;
     border-bottom:1px solid;"
-    width: 30%;
+    width: 20px;
     border-collapse: collapse;
+    text-align: end;
 }    
 .table-valor-total, .table-total{
     text-align: right;
@@ -73,9 +74,13 @@ body{
 
 .table-mercadoria {
     text-align: left;
-    width: 70%;
+    width: %;
     
 }    
+
+.table-digito{
+    text-align: center;
+}
 
 .info.extrato{
     width: fill-available;
