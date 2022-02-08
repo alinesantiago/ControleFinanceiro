@@ -1,57 +1,56 @@
-
 * {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box
-}  
+}
 
-body{
+body {
     font-family: 'Lato', 'sans-sefif';
-    
-}    
 
-.header{ 
-    background: rgb(224,224,224);
+}
+
+.header {
+    background: rgb(224, 224, 224);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80px; 
+    height: 80px;
     flex-wrap: nowrap;
-    
-}    
 
-.img-menu, .menu{
+}
+
+.img-menu, .menu {
     padding-left: 20px;
     padding-right: 20px;
-    
-}    
 
-.controlefinanceiro{
+}
+
+.controlefinanceiro {
     font-size: 20px;
-    font-weight:bold;
-    
-}    
+    font-weight: bold;
 
-.menu-hamburguer{
+}
+
+.menu-hamburguer {
     display: none;
 }
 
-.liner{
+.liner {
     display: none;
 }
 
-.menu{
+.menu {
     display: flex;
-    background:white; 
+    background: white;
     text-align: center;
     height: 40px;
     justify-content: space-evenly;
     align-items: center;
     font-weight: bold;
-   white-space:nowrap;
-}    
+    white-space: nowrap;
+}
 
 
 .extratodetransacoes {
@@ -59,40 +58,42 @@ body{
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-}    
+}
 
-.table-valor{
+.table-valor {
     text-align: right;
-    border-bottom:1px solid;"
-    width: 20px;
+    border-bottom: 1px solid;
+    "
+width: 20px;
     border-collapse: collapse;
     text-align: end;
-}    
-.table-valor-total, .table-total{
+}
+
+.table-valor-total, .table-total {
     text-align: right;
-}    
+}
 
 .table-mercadoria {
     text-align: left;
     width: %;
-    
-}    
 
-.table-digito{
+}
+
+.table-digito {
     text-align: center;
 }
 
-.info.extrato{
+.info.extrato {
     width: fill-available;
-    border-bottom:1px solid;
+    border-bottom: 1px solid;
     border-collapse: collapse;
     padding-bottom: 8px;
     flex-basis: 680px !important;
     flex-grow: 1;
 
-}    
+}
 
-.corpo{
+.corpo {
     display: flex;
     justify-content: center;
     padding-top: 30px;
@@ -100,241 +101,249 @@ body{
     margin: 20px;
 }
 
-.divisor{
+.divisor {
     padding-left: 5px;
     padding-right: 5px;
 }
-.fechar{
+
+.fechar {
     display: none;
 }
 
-@media screen and (max-width: 768px)  {
-    .corpo{
+@media screen and (max-width: 768px) {
+    .corpo {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    .liner{
+    .liner {
         display: none;
     }
 
-    .formulario{
-            flex-direction: row;
-            height: 189px;
-            width: 95%;
-            flex-wrap: wrap;
-            flex-grow: 1;
-            flex-basis: 0;
-
-        }
-      
-        .nova-transacao{
-            display: none;
-        }
-    
-        .menu-hamburguer{
-            display: block;
-        }
-      
-        .menu{
-            text-align: justify;
-            position: fixed;
-            justify-content: start;
-            top:0;
-            right:0;
-            flex-direction: column;
-            height: 100%;
-            background-color: #333;
-            color:white;
-            padding-left: 0px;
-            padding-right: 0px;
-            border-left-width: 0px;
-            margin-left: 0px;
-            width: 240px;
-    
-        }
-
-        .campo{
-            padding-bottom: 10px;
-            height: fit-content;
-        }
-        
-        .campo1{
-            width: 25%;
-            height: fit-content;
-
-        }
-
-        .campo2{
-            width: 40%;
-            height: fit-content;
-
-        }
-
-        .adicionar .campo3{
-            width: 33%;
-            margin-top: 10px
-        }
-        
-        .cadastro{
-            padding-top: 11px;
-        }
-
-        .fechar{
-            display: block;
-            padding-top: 12px;
-            padding-bottom: 12px;
-        }
-    
-        .cadastro, .limpar{
-        padding-left: 12px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        width: 100%;
-        background-color: #333;
-        transition:All 1s ease;
-        -webkit-transition:All 1s ease;
-        -moz-transition:All 1s ease;
-        -o-transition:All 1s ease;
-            
-        }
-    
-        .fechar{
-            margin:20px;
-            padding-right: 82%;;
-        }
-    
-        .divisor{
-            display:none;
-        }
-        
-        .limpar:hover{
-            background-color: #C4C4C4;
-            color: black;
-          }
-    
-        
-        .cadastro:hover{
-            background-color: #C4C4C4;
-            color: black;
-          }
-    
-          .info.extrato {
-            width: 100% !important;
-            flex-basis:669px;
-        }
-
-
-
-@media screen and (max-width: 411px)  {
-    .corpo{
-        display: flex;
-        gap: 30px;
-        padding-top: 0px;
+    .formulario {
+        flex-direction: row;
+        height: 189px;
+        width: 95%;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        justify-content: flex-end;
     }
 
-    .formulario{
-        flex-direction: column;
-        padding-top: 0;
-        padding-bottom: 0;
-        border: none;
-        justify-content: space-evenly;
-        flex-basis: 400px;
-    }
-
-    .nova-transacao{
+    .nova-transacao {
         display: none;
     }
 
-    .menu-hamburguer{
+    .menu-hamburguer {
         display: block;
     }
-  
-    .menu{
+
+    .menu {
+        text-align: justify;
         position: fixed;
         justify-content: start;
-        top:0;
-        right:0;
+        top: 0;
+        right: 0;
         flex-direction: column;
         height: 100%;
         background-color: #333;
-        color:white;
+        color: white;
         padding-left: 0px;
         padding-right: 0px;
         border-left-width: 0px;
         margin-left: 0px;
         width: 240px;
-        text-align: justify;
+
+
     }
 
-    .campo1 , .campo2 .adicionar{
-        width: 100%;
-    }
-    
-    .campo2{
-        width: 100%;
+    .campo {
+        padding-bottom: 10px;
+        height: fit-content;
     }
 
-    .adicionar{
-        width: 100%;
+    .campo1 {
+        width: 30%;
+        height: fit-content;
+        margin: ;
     }
 
-    .cadastro{
+    .campo2 {
+        width: 40%;
+        height: fit-content;
+        padding-right: 20px;
+        padding-left: 20px;
+
+    }
+
+    .adicionar .campo3 {
+        width: 33%;
+        margin-top: 10px
+    }
+
+    .cadastro {
         padding-top: 11px;
     }
 
-    .cadastro, .limpar{
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 12px;;
-    width: 100%;
-    background-color: #333;
-    transition:All 1s ease;
-    -webkit-transition:All 1s ease;
-    -moz-transition:All 1s ease;
-    -o-transition:All 1s ease;
-        
-    }
-
-    .fechar{
+    .fechar {
         display: block;
-        margin:20px;
         padding-top: 12px;
-        padding-right: 82%;
         padding-bottom: 12px;
-
     }
 
-    .divisor{
-        display:none;
-    }
-    
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu-responsivo{
-    position: fixed;
-    top:0;
-    right:0;
-    flex-direction: column;
-        height: 100%;
-        
+    .cadastro, .limpar {
+        padding-left: 12px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        width: 100%;
         background-color: #333;
-        color:white;}
+        transition: All 1s ease;
+        -webkit-transition: All 1s ease;
+        -moz-transition: All 1s ease;
+        -o-transition: All 1s ease;
 
-        
+    }
+
+    .fechar {
+        margin: 20px;
+        padding-right: 82%;
+        ;
+    }
+
+    .divisor {
+        display: none;
+    }
+
+    .limpar:hover {
+        background-color: #C4C4C4;
+        color: black;
+    }
+
+
+    .cadastro:hover {
+        background-color: #C4C4C4;
+        color: black;
+    }
+
+    .info.extrato {
+        width: 100% !important;
+        flex-basis: 669px;
+    }
+
+
+
+    @media screen and (max-width: 411px) {
+        .corpo {
+            display: flex;
+            gap: 30px;
+            padding-top: 0px;
+        }
+
+        .formulario {
+            flex-direction: column;
+            padding-top: 0;
+            padding-bottom: 0;
+            border: none;
+            justify-content: space-evenly;
+            flex-basis: 400px;
+        }
+
+        .nova-transacao {
+            display: none;
+        }
+
+        .menu-hamburguer {
+            display: block;
+        }
+
+        .menu {
+            position: fixed;
+            justify-content: start;
+            top: 0;
+            right: 0;
+            flex-direction: column;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding-left: 0px;
+            padding-right: 0px;
+            border-left-width: 0px;
+            margin-left: 0px;
+            width: 240px;
+            text-align: justify;
+        }
+
+        .campo1, .campo2 .adicionar {
+            width: 100%;
+        }
+
+        .campo2 {
+            width: 100%;
+            height: fit-content;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .adicionar {
+            width: 100%;
+        }
+
+        .cadastro {
+            padding-top: 11px;
+        }
+
+        .cadastro, .limpar {
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left: 12px;
+            ;
+            width: 100%;
+            background-color: #333;
+            transition: All 1s ease;
+            -webkit-transition: All 1s ease;
+            -moz-transition: All 1s ease;
+            -o-transition: All 1s ease;
+
+        }
+
+        .fechar {
+            display: block;
+            margin: 20px;
+            padding-top: 12px;
+            padding-right: 82%;
+            padding-bottom: 12px;
+
+        }
+
+        .divisor {
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .menu-responsivo {
+            position: fixed;
+            top: 0;
+            right: 0;
+            flex-direction: column;
+            height: 100%;
+
+            background-color: #333;
+            color: white;
+        }
