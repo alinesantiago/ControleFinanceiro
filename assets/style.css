@@ -60,26 +60,25 @@ body {
     text-align: center;
 }
 
-.table-valor {
+.valor {
     text-align: right;
     border-bottom: 1px solid;
-    "
-width: 20px;
+    width: 20px;
     border-collapse: collapse;
     text-align: end;
 }
 
-.table-valor-total, .table-total {
+.valor-total, .table-total {
     text-align: right;
 }
 
-.table-mercadoria {
+.mercadoria {
     text-align: left;
-    width: %;
+   
 
 }
 
-.table-digito {
+.digito {
     text-align: center;
 }
 
