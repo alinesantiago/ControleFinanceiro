@@ -82,7 +82,7 @@ body {
     text-align: center;
 }
 
-.info.extrato {
+.info-extrato {
     width: fill-available;
     border-bottom: 1px solid;
     border-collapse: collapse;
@@ -225,7 +225,7 @@ body {
         color: black;
     }
 
-    .info.extrato {
+    .info-extrato {
         width: 100% !important;
         flex-basis: 669px;
     }
