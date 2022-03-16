@@ -21,7 +21,7 @@
                 <div class="fechar"> <img src="./assets/img/fechar.png"></div>
                 <div class="cadastro">Cadastro de transações</div>
                 <div class="divisor">|</div>
-                <div class="limpar">Limpar dados</div>
+                <div class="limpar" onclick="transacao-splice">Limpar dados</div>
             </div>
             <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
         </div>
@@ -70,13 +70,29 @@
                             Mercadoria
                         </th>
                         <th class="valor" style=" border-bottom:1px solid;">
-                            
-                        </th>
-                        <th class="valor" style=" border-bottom:1px solid;">
                            Valor
                         </th>
+                        <th class="total" style=" border-bottom:1px solid;">
+                         </th>
                     </tr>
-
+                </tbody>
+                <br>
+                <p style="border-bottom:1px solid;"></p>
+                <tbody class="extrato-resultado">
+                    <tr>
+                        <th class="valor" style=" border-bottom:1px solid;">
+                            
+                        </th>
+                        <th class="mercadoria" style=" border-bottom:1px solid;">
+                            Total
+                        </th>
+                        <th class="valor" style=" border-bottom:1px solid;">
+                          R$350,00
+                        </th>
+                        <th class="total" style=" border-bottom:1px solid;">
+                            
+                         </th>
+                    </tr>
                 </tbody>
             </table>
         </div>

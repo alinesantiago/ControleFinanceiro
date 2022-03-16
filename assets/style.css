@@ -74,7 +74,6 @@ body {
 
 .mercadoria {
     text-align: left;
-   
 
 }
 
@@ -83,6 +82,7 @@ body {
 }
 
 .info-extrato {
+    border-bottom:1px solid;"
     width: fill-available;
     border-bottom: 1px solid;
     border-collapse: collapse;
@@ -90,6 +90,20 @@ body {
     flex-basis: 680px !important;
     flex-grow: 1;
 
+}
+
+.digito, .mercadoria, .valor{
+    border-bottom:1px solid;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.valor{
+    padding-left:60px;
+}
+
+.mercadoria{
+    padding: left 30px;
 }
 
 .corpo {
@@ -109,6 +123,18 @@ body {
     display: none;
 }
 
+.extrato-resultado{
+    border-bottom-style: hidden;
+    border-top: double;
+
+}
+
+.res{
+    border-bottom:1px solid;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+}
 @media screen and (max-width: 768px) {
     .corpo {
         display: flex;
