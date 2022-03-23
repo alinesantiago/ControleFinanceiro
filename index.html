@@ -21,8 +21,8 @@
                 <div class="fechar"> <img src="./assets/img/fechar.png"></div>
                 <div class="cadastro">Cadastro de transações</div>
                 <div class="divisor">|</div>
-                <div class="limpar" onclick="transacao-splice">Limpar dados</div>
-            </div>
+                <div class="limpar" onclick="limparDados()">Limpar dados</div>
+            </div> 
             <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
         </div>
     </header>
@@ -44,12 +44,12 @@
             </div>
 
             <div class="campo1" style="padding-bottom: 10px;">
-                <div class="valor" style="padding-bottom: 10px;"> Valor</div>
+                <div class="valor" style="padding-bottom: 10px;" > Valor</div>
                 <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
             </div>
 
             <div class="campo3" style="padding-bottom: 10px;">
-                <input type="submit" ; class="adicionar" ; value="Adicionar transação">
+                <input type="submit" ; onclick="enviarDados" class="adicionar" ; value="Adicionar transação">
             </div>
 
         </section>
