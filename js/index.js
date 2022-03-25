@@ -1,26 +1,38 @@
-var cadastro = [
-    {
-        digito: false,
-        mercadoria: 'Quis nostrud exercitation	',
-        valor: '9779,99'
-    },
-    {
-        digito: false,
-        mercadoria: 'Quis nostrud exercitation	',
-        valor: '5566,99'
-    },
-    {
-        digito: true,
-        mercadoria: 'Lorem ipsum',
-        valor: '9,99'
+var cadastroCru = localStorage.getItem(cadastro)
+    if (cadastroCru != null){
+        var cadastro = JSON.parse(localStorage('cadastro'))
+    } else {
+        var cadastro = [];
     }
-];
 
+
+////////////////////////////////////////////////////////////////
 function limparDados() {
-    var cadastro = [{ }]
-    desenhaCadastro()
+    linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
+    linhasExistentes.forEach((element) => {
+        element.remove()
+    });
+
+    localStorage.clear();
+    var cadastro = [];
+    desenhaCadastro();
+    alert("Dados limpos!");
 }
 
+
+
+function enviarDados(e){
+    console.log(e)
+    e.preventDefault(); // prevent default previne a ação padrão de certo evento
+    var cadastroCru = localStorage.getItem(cadastro)
+    if (cadastroCru != null){
+        var cadastro = JSON.parse(localStorage('cadastro'))
+    } else {
+        var cadastro = [];
+    }
+
+    cadastro.push
+}
 
 function desenhaCadastro() {
 
@@ -36,7 +48,6 @@ function desenhaCadastro() {
     }
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////
 
 desenhaCadastro()
-

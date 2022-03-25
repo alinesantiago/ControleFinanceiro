@@ -19,7 +19,7 @@
             <div class="controlefinanceiro"> Controle financeiro </div>
             <div class="menu">
                 <div class="fechar"> <img src="./assets/img/fechar.png"></div>
-                <div class="cadastro">Cadastro de transações</div>
+                <div class="cadastro" onclick="limparDados()">Cadastro de transações</div>
                 <div class="divisor">|</div>
                 <div class="limpar" onclick="limparDados()">Limpar dados</div>
             </div> 
@@ -28,34 +28,31 @@
     </header>
 
     <div class="corpo">
-        <section class="formulario">
+        <section class="formulario" onsubmit="enviarDados(event)" return false; >
             
             <b class="nova-transacao" style="padding-bottom: 10px;"> Nova transação</b> <br>
             <div class="campo1">
                 <div class="novatransacao" style="padding-bottom: 10px;"> Tipo de transação </div>
-                <select name="TipoTransação" class="novatransacao">
+                <select name="TipoTransação" class="novatransacao" id="tipoTransação">
                     <option value="Venda">Venda</option>
                     <option value="Compra" selected>Compra</option>
                 </select>
             </div>
             <div class="campo2">
                 <div class="nomedamercadoria" style="padding-bottom: 10px;"> Nome da Mercadoria</div>
-                <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria">
+                <input type="text" ; placeholder=" Input" ; name="NomeDaMercadoria" id="inputNomeMercadoria">
             </div>
 
             <div class="campo1" style="padding-bottom: 10px;">
                 <div class="valor" style="padding-bottom: 10px;" > Valor</div>
-                <input type="text" ; placeholder=" R$ 0,00" name="NomeDaMercadoria">
+                <input type="text" ; placeholder=" R$ 0,00" name="ValorDaMercadoria" id="inputValorMercadoria">
             </div>
 
             <div class="campo3" style="padding-bottom: 10px;">
-                <input type="submit" ; onclick="enviarDados" class="adicionar" ; value="Adicionar transação">
+                <input type="submit" ; onclick="enviarDados()" class="adicionar" ; value="Adicionar transação">
             </div>
 
         </section>
-
-        <div class="liner"><img src=".assets/img/line.png"></div>
-
 
 
         <div class="extrato">
