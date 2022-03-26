@@ -1,36 +1,37 @@
-var cadastroCru = localStorage.getItem(cadastro)
-    if (cadastroCru != null){
-        var cadastro = JSON.parse(localStorage('cadastro'))
+var cadastroCru = localStorage.getItem('cadastro')
+if (cadastroCru != null){
+ var cadastro = JSON.parse(cadastroCru); 
     } else {
-        var cadastro = [];
-    }
-
-
-////////////////////////////////////////////////////////////////
-function limparDados() {
-    linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
-    linhasExistentes.forEach((element) => {
-        element.remove()
-    });
-
-    localStorage.clear();
     var cadastro = [];
-    desenhaCadastro();
-    alert("Dados limpos!");
 }
 
 
 
+
+////////////////////////////////////////////////////////////////
+function limparDados() {
+linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
+linhasExistentes.forEach((element) => {
+    element.remove()
+});
+
+localStorage.clear();
+var cadastro = [];
+desenhaCadastro();
+alert("Dados limpos!");
+}
+
+
 function enviarDados(e){
     console.log(e)
-    e.preventDefault(); // prevent default previne a ação padrão de certo evento
+    e.preventDefault() // prevent default previne a ação padrão de certo evento
     var cadastroCru = localStorage.getItem(cadastro)
     if (cadastroCru != null){
         var cadastro = JSON.parse(localStorage('cadastro'))
     } else {
         var cadastro = [];
     }
-
+ console.log(e)
     cadastro.push
 }
 
@@ -50,4 +51,5 @@ function desenhaCadastro() {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+desenhaCadastro()
 desenhaCadastro()
