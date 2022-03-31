@@ -68,6 +68,14 @@ body {
     text-align: end;
 }
 
+.spacing{
+    text-align: right;
+    border-bottom: 1px solid;
+    width: 20px;
+    border-collapse: collapse;
+    text-align: end
+}
+
 .valor-total, .table-total {
     text-align: right;
 }
@@ -133,7 +141,10 @@ body {
     border-bottom:1px solid;
     padding-bottom: 8px;
     padding-top: 8px;
+}
 
+.campo2, .campo3{
+    padding-top: 10px;
 }
 @media screen and (max-width: 768px) {
     .corpo {
@@ -191,7 +202,7 @@ body {
     .campo1 {
         width: 30%;
         height: fit-content;
-        margin: ;
+        
     }
 
     .campo2 {

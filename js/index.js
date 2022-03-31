@@ -1,44 +1,48 @@
 var cadastroCru = localStorage.getItem('cadastro')
-if (cadastroCru != null){
- var cadastro = JSON.parse(cadastroCru); 
-    } else {
+if (cadastroCru != null) {
+    var cadastro = JSON.parse(cadastroCru);
+} else {
     var cadastro = [];
+
 }
-
-
-
 
 ////////////////////////////////////////////////////////////////
-function limparDados() {
-linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
-linhasExistentes.forEach((element) => {
-    element.remove()
-});
 
-localStorage.clear();
-var cadastro = [];
-desenhaCadastro();
-alert("Dados limpos!");
-}
-
-
-function enviarDados(e){
-    console.log(e)
-    e.preventDefault() // prevent default previne a ação padrão de certo evento
-    var cadastroCru = localStorage.getItem(cadastro)
-    if (cadastroCru != null){
-        var cadastro = JSON.parse(localStorage('cadastro'))
+function enviarDados(e) {
+    var cadastroCru = localStorage.getItem('cadastro')
+    if (cadastroCru != null) {
+        var cadastro = JSON.parse(cadastroCru);
     } else {
         var cadastro = [];
     }
- console.log(e)
-    cadastro.push
+} //tentar método do video
+
+
+let subirDados = document.getElementById("enviar-dados");
+subirDados.addEventListener("click", enviarDados)
+
+
+//Excluindo dados
+function limparDados(e) {
+    //seleciona todas as linhas a serem excluídas
+    linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
+    linhasExistentes.forEach((element) => {
+        //remove as linhas
+        element.remove()
+    });
+   window.confirm("Deseja excluir os dados?");
+    //limpa local storage
+    localStorage.clear();
+    var cadastro = [];
+    desenhaCadastro();
 }
 
-function desenhaCadastro() {
 
+//função desenhar cadastro
+function desenhaCadastro() {
     for (central in cadastro) {
-        document.querySelector('table.info-extrato tbody').innerHTML += `
+        document.querySelector('table.info-extrato tbody').innerHTML += 
+        `
     <tr class="conteudo-dinamico">
         <td class="digito" > ${cadastro[central].digito ? '+' : '-'} </td>
         <td class="mercadoria"> ${cadastro[central].mercadoria} </td>
@@ -49,7 +53,9 @@ function desenhaCadastro() {
     }
 }
 
+if (document.querySelector('info-extrato, tbody, extrato-resultado, conteudo-dinamico') != null){
+    
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 
-desenhaCadastro()
 desenhaCadastro()
