@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <Title> Controle Financeiro </Title>
     <link rel="stylesheet" href="./assets/formulario.css">
@@ -18,7 +17,7 @@
             <div class="controlefinanceiro"> Controle financeiro </div>
             <div class="menu">
                 <div class="fechar"> <img src="./assets/img/fechar.png"></div>
-                <div class="cadastro" onclick="limparDados()">Cadastro de transações</div>
+                <div class="cadastro">Cadastro de transações</div>
                 <div class="divisor">|</div>
                 <div class="limpar" onclick="limparDados()">Limpar dados</div>
             </div> 
@@ -27,7 +26,7 @@
     </header>
 
     <div class="corpo">
-        <section class="formulario" ; return false; >
+        <form class="formulario" ; onsubmit="enviarDados(event)" return false; >
             
             <b class="nova-transacao" style="padding-bottom: 10px;"> Nova transação</b>
             <div class="campo1">
@@ -49,17 +48,17 @@
             </div>
 
             <div class="campo3" style="padding-bottom: 10px;">
-                <input type="submit"  class="adicionar" onclick="enviarDados()" id="enviar-dados" value="Adicionar transação">
+                <input type="submit"  class="adicionar" id="enviar-dados" value="Adicionar transação">
             </div>
 
-        </section>
+        </form>
 
 
         <div class="extrato">
             <h1 class="extratodetransacoes"> Extrato de transações </h1>
             <table class="info-extrato" style="width: 100%" ; cellspacing="0">
                 <tbody>
-                    <tr style="border-bottom:1px solid;">
+                    <tr>
                         <th class="spacing" style=" border-bottom:1px solid;">
                     
                         </th>
@@ -77,7 +76,7 @@
                 <p style="border-bottom:1px solid;"></p>
                 <tbody class="extrato-resultado">
                     <tr>
-                        <th class="valor" style=" border-bottom:1px solid;">
+                        <th class="dinheiro" style=" border-bottom:1px solid;">
                             
                         </th>
                         <th class="mercadoria" style=" border-bottom:1px solid;">
