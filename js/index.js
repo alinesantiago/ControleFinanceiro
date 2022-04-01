@@ -65,10 +65,7 @@ if (cadastro.length == 0) {
     document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
 }
 
-var valor = 125.45;
-//com R$
-var dinheiro = numero.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-console.log(dinheiro);
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 desenhaCadastro()
