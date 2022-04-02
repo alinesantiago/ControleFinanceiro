@@ -8,7 +8,6 @@ if (cadastroCru != null) {
 
 ////////////////////////////////////////////////////////////////
 
-
 function enviarDados(e) {
     e.preventDefault();
     var cadastroCru = localStorage.getItem('cadastro')
@@ -17,17 +16,20 @@ function enviarDados(e) {
     } else {
         var cadastro = [];
     }
-    console.log(e.target.elements['digito'].value)
-} //tentar método do video
+    //enviando ao local storage
+    cadastro.push({
+        digito: e.target.elements['transacao'].value,
+        mercadoria: e.target.elements['nomemercadoria'].value,
+        valor: e.target.elements['valormercadoria'].value
+    })
+    localStorage.setItem("cadastro", JSON.stringify(cadastroCru));
 
-
-let subirDados = document.getElementById("enviar-dados");
-subirDados.addEventListener("click", enviarDados)
-
+    console.log(cadastro)
+} //ERRO = UNDEFINED / JSON
 
 //Excluindo dados
 function limparDados() {
-    if (cadastro > 0 && window.confirm("Deseja excluir os dados?") ) {
+    if (cadastro != 0 && window.confirm("Deseja excluir os dados?") ) {
         //seleciona todas as linhas a serem excluídas
         linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
         linhasExistentes.forEach((element) => {
@@ -37,7 +39,7 @@ function limparDados() {
         //limpa local storage
         localStorage.clear();
         var cadastro = [];
-    } else if (cadastro == 0) {
+    } else if (cadastro == '') {
         alert('oi')
     }
 }  //pensei em usar lenght mas dá erro...
