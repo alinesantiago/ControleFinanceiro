@@ -1,53 +1,3 @@
-var cadastroCru = localStorage.getItem('cadastro')
-if (cadastroCru != null) {
-    var cadastro = JSON.parse(cadastroCru);
-} else {
-    var cadastro = [];
-
-}
-
-////////////////////////////////////////////////////////////////
-
-function enviarDados(e) {
-    e.preventDefault();
-    var cadastroCru = localStorage.getItem('cadastro')
-    if (cadastroCru != null) {
-        var cadastro = JSON.parse(cadastroCru);
-    } else {
-        var cadastro = [];
-    }
-    //enviando ao local storage
-    cadastro.push({
-        digito: e.target.elements['transacao'].value,
-        mercadoria: e.target.elements['nomemercadoria'].value,
-        valor: e.target.elements['valormercadoria'].value
-    })
-    localStorage.setItem("cadastro", JSON.stringify(cadastroCru));
-
-    console.log(cadastro)
-} //ERRO = UNDEFINED / JSON
-
-//Excluindo dados
-function limparDados() {
-    if (cadastro != 0 && window.confirm("Deseja excluir os dados?") ) {
-        //seleciona todas as linhas a serem excluídas
-        linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
-        linhasExistentes.forEach((element) => {
-            //remove as linhas
-            element.remove()
-        });
-        //limpa local storage
-        localStorage.clear();
-        var cadastro = [];
-    } else if (cadastro == '') {
-        alert('oi')
-    }
-}  //pensei em usar lenght mas dá erro...
-
-
-
-
-//função desenhar cadastro
 function desenhaCadastro() {
     for (central in cadastro) {
         document.querySelector('table.info-extrato tbody').innerHTML +=
@@ -63,10 +13,54 @@ function desenhaCadastro() {
 }
 
 //verifica se o cadastro está vazio, e informa.
-if (cadastro.length == 0) {
-    document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
-}
+//if (cadastro.length == 0) {
+ //   document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
+//}
 
+var cadastroCru = localStorage.getItem('cadastro')
+if (cadastroCru != null) {
+    var cadastro = JSON.parse(cadastroCru);
+} else {
+    var cadastro = [];
+
+}    
+
+////////////////////////////////////////////////////////////////
+
+function enviarDados(e) {
+    //enviando ao local storage
+    cadastro.push({
+        digito: e.target.elements['transacao'].value,
+        mercadoria: e.target.elements['nomemercadoria'].value,
+        valor: e.target.elements['valormercadoria'].value
+    })    
+    localStorage.setItem("cadastro", JSON.stringify(cadastro));
+    console.log(cadastro)
+} //ERRO = UNDEFINED / JSON    
+
+//Excluindo dados
+function limparDados() {
+    if (cadastro != 0 && window.confirm("Deseja excluir os dados?") ) {
+        //seleciona todas as linhas a serem excluídas
+        linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
+        linhasExistentes.forEach((element) => {
+            //remove as linhas
+            element.remove()
+            localStorage.clear();
+
+        });    
+        //limpa local storage
+        localStorage.clear();
+        var cadastro = [];
+    } else if (cadastro == '') {
+        alert('oi')
+    }    
+}  //pensei em usar lenght mas dá erro...    
+
+
+
+
+//função desenhar cadastro
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
