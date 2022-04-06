@@ -1,4 +1,9 @@
 function desenhaCadastro() {
+    if (cadastro.length == 0) {
+        document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML =
+            `<div> Nenhuma transação cadastrada.</div>`
+    }
+
     for (central in cadastro) {
         document.querySelector('table.info-extrato tbody').innerHTML +=
             `
@@ -10,12 +15,10 @@ function desenhaCadastro() {
     </tr>
     `
     }
+    //verifica se o cadastro está vazio, e informa.
+    //if (cadastro.length == 0) {
+    //   document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
 }
-
-//verifica se o cadastro está vazio, e informa.
-//if (cadastro.length == 0) {
- //   document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
-//}
 
 var cadastroCru = localStorage.getItem('cadastro')
 if (cadastroCru != null) {
@@ -23,7 +26,7 @@ if (cadastroCru != null) {
 } else {
     var cadastro = [];
 
-}    
+}
 
 ////////////////////////////////////////////////////////////////
 
@@ -33,29 +36,42 @@ function enviarDados(e) {
         digito: e.target.elements['transacao'].value,
         mercadoria: e.target.elements['nomemercadoria'].value,
         valor: e.target.elements['valormercadoria'].value
-    })    
+    })
     localStorage.setItem("cadastro", JSON.stringify(cadastro));
+    desenhaCadastro();//alteraçao aqui
     console.log(cadastro)
 } //ERRO = UNDEFINED / JSON    
 
+
+
+
+
 //Excluindo dados
 function limparDados() {
-    if (cadastro != 0 && window.confirm("Deseja excluir os dados?") ) {
-        //seleciona todas as linhas a serem excluídas
-        linhasExistentes = [...document.querySelectorAll('info-extrato, tbody, extrato-resultado, conteudo-dinamico')];
-        linhasExistentes.forEach((element) => {
-            //remove as linhas
-            element.remove()
-            localStorage.clear();
+    //testa quantidade, se diferente de 0 executa a função limpeza de dados, se não, alerta a inexistencia deles
+    if (cadastro != 0 && window.confirm("Deseja excluir os dados?")) {
+        exclusaoDados();
+    } else if (cadastro <= 0) {
+        alert('Não há transações para serem excluídas.');
+    }
+}
 
-        });    
-        //limpa local storage
+//Exclusão de dados
+    function exclusaoDados(){
+    for (element of document.querySelectorAll(".conteudo-dinamico")) {
+        element.remove();
         localStorage.clear();
-        var cadastro = [];
-    } else if (cadastro == '') {
-        alert('oi')
-    }    
-}  //pensei em usar lenght mas dá erro...    
+        cadastro = [];
+        localStorage.setItem("cadastro", JSON.stringify(cadastro));
+        desenhaCadastro();
+    }
+
+} 
+
+//testa quantidade, se maior que 0 executa a limpeza de dados, se não, alerta a inexistencia deles
+
+
+//pensei em usar lenght mas dá erro...    
 
 
 
@@ -64,4 +80,4 @@ function limparDados() {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-desenhaCadastro()
+desenhaCadastro() 
