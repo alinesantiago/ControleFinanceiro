@@ -4,6 +4,10 @@
     border: 0;
     box-sizing: border-box
 }
+  
+#hiden{
+    display: none;
+}
 
 body {
     font-family: 'Lato', 'sans-sefif';
@@ -146,6 +150,8 @@ body {
 .campo2, .campo3{
     padding-top: 10px;
 }
+
+
 @media screen and (max-width: 768px) {
     .corpo {
         display: flex;
@@ -267,7 +273,9 @@ body {
         flex-basis: 669px;
     }
 
-
+    .hiden {
+        display: none;
+    }
 
     @media screen and (max-width: 411px) {
         .corpo {

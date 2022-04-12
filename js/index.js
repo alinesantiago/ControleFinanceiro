@@ -1,4 +1,6 @@
 function desenhaCadastro() {
+
+
     if (cadastro.length == 0) {
         document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML =
             `<div> Nenhuma transação cadastrada.</div>`
@@ -8,24 +10,19 @@ function desenhaCadastro() {
         document.querySelector('table.info-extrato tbody').innerHTML +=
             `
     <tr class="conteudo-dinamico">
-        <td class="digito" > ${cadastro[central].digito ? '+' : '-'} </td>
+        <td class="digito" > ${cadastro[central].digito} </td>
         <td class="mercadoria"> ${cadastro[central].mercadoria} </td>
-        <td class="valor"> ${cadastro[central].valor} </td>
+        <td class="valor"> R$${cadastro[central].valor} </td>
         <th class="valor2" style=" border-bottom:1px solid;"> </th>
     </tr>
     `
     }
-    //verifica se o cadastro está vazio, e informa.
-    //if (cadastro.length == 0) {
-    //   document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML = `<div> Nenhuma transação cadastrada.</div>`;
 }
-
 var cadastroCru = localStorage.getItem('cadastro')
 if (cadastroCru != null) {
     var cadastro = JSON.parse(cadastroCru);
 } else {
     var cadastro = [];
-
 }
 
 ////////////////////////////////////////////////////////////////
@@ -38,11 +35,9 @@ function enviarDados(e) {
         valor: e.target.elements['valormercadoria'].value
     })
     localStorage.setItem("cadastro", JSON.stringify(cadastro));
-    desenhaCadastro();//alteraçao aqui
+    desenhaCadastro();
     console.log(cadastro)
-} //ERRO = UNDEFINED / JSON    
-
-
+}
 
 
 
@@ -57,7 +52,7 @@ function limparDados() {
 }
 
 //Exclusão de dados
-    function exclusaoDados(){
+function exclusaoDados() {
     for (element of document.querySelectorAll(".conteudo-dinamico")) {
         element.remove();
         localStorage.clear();
@@ -66,17 +61,27 @@ function limparDados() {
         desenhaCadastro();
     }
 
-} 
-
-//testa quantidade, se maior que 0 executa a limpeza de dados, se não, alerta a inexistencia deles
+}
 
 
-//pensei em usar lenght mas dá erro...    
+let saldo = 0;
+
+//impressão do saldo final
+document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
+<th class="valor" style=" border-bottom:1px solid;">
+</th>
+<th class="mercadoria" style=" border-bottom:1px solid;">
+    Total
+</th>
+<th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
+  R$${saldo}
+</th>
+<th class="total" style=" border-bottom:1px solid;">
+ </th>
+</tr>`
 
 
-
-
-//função desenhar cadastro
+var botaofechar = document.getElementById('fechar');
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

@@ -15,8 +15,8 @@
         <div style="width: 1100px;display: flex;justify-content: space-around;">
             <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
             <div class="controlefinanceiro"> Controle financeiro </div>
-            <div class="menu">
-                <div class="fechar"> <img src="./assets/img/fechar.png"></div>
+            <div class="menu" id="menu">
+                <div class="fechar" id="fechar"> <img src="./assets/img/fechar.png"></div>
                 <div class="cadastro">Cadastro de transações</div>
                 <div class="divisor">|</div>
                 <div class="limpar" onclick="limparDados()">Limpar dados</div>
@@ -32,9 +32,8 @@
             <div class="campo1">
                 <div class="novatransacao" style="padding-bottom: 10px;"> Tipo de transação </div>
                 <select name="TipoTransação" class="novatransacao" id="transacao">
-                    <option value="Venda">Venda</option>
-                    <option value="Compra">Compra</option>
-                    <option value="selecione-transacao" selected>Selecione uma transação</option>
+                    <option value="+">Venda</option>
+                    <option value="-">Compra</option>
                 </select>
             </div>
             <div class="campo2">
@@ -68,25 +67,22 @@
                         <th class="valor" style=" border-bottom:1px solid;">
                            Valor
                         </th>
-                        <th class="total" style=" border-bottom:1px solid;">
+                        <th class="spacing" style=" border-bottom:1px solid;"> 
                          </th>
                     </tr>
                 </tbody>
                 <br>
-                <p style="border-bottom:1px solid;"></p>
                 <tbody class="extrato-resultado">
                     <tr>
                         <th class="valor" style=" border-bottom:1px solid;">
-                            
                         </th>
                         <th class="mercadoria" style=" border-bottom:1px solid;">
                             Total
                         </th>
-                        <th class="valor" style=" border-bottom:1px solid;">
+                        <th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
                           R$350,00
                         </th>
                         <th class="total" style=" border-bottom:1px solid;">
-                            
                          </th>
                     </tr>
                 </tbody>
