@@ -64,7 +64,6 @@ function exclusaoDados() {
 }
 
 
-let saldo = 0;
 
 //impressão do saldo final
 document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
@@ -81,8 +80,20 @@ document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
 </tr>`
 
 
+for (valor of valores) {
+    saldo += valor.value
+}
+let saldo = 0;
+
 var botaofechar = document.getElementById('fechar');
 
+botaofechar.addEventListener('click', function () {
+
+    var menu = document.getElementById('menu');
+
+    menu.classList.toggle('hiden');
+
+});
 /////////////////////////////////////////////////////////////////////////////////////////
 
 desenhaCadastro() 
