@@ -1,5 +1,28 @@
 function desenhaCadastro() {
 
+    var saldo = [];
+    for (item in cadastro) {
+        let calculo =
+            parseFloat(cadastro[item].valor)
+        if (cadastro[item].digito == "+") {
+            saldo += calculo;
+        } else {
+            saldo -= calculo;
+        }
+    }
+
+    document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
+    <th class="valor" style=" border-bottom:1px solid;">
+    </th>
+    <th class="mercadoria" style=" border-bottom:1px solid;">
+    Total
+    </th>
+    <th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
+    R$${saldo}
+    </th>
+    <th class="total" style=" border-bottom:1px solid;">
+    </th>
+    </tr>`
 
     if (cadastro.length == 0) {
         document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML =
@@ -9,15 +32,16 @@ function desenhaCadastro() {
     for (central in cadastro) {
         document.querySelector('table.info-extrato tbody').innerHTML +=
             `
-    <tr class="conteudo-dinamico">
+        <tr class="conteudo-dinamico">
         <td class="digito" > ${cadastro[central].digito} </td>
         <td class="mercadoria"> ${cadastro[central].mercadoria} </td>
         <td class="valor"> R$${cadastro[central].valor} </td>
         <th class="valor2" style=" border-bottom:1px solid;"> </th>
-    </tr>
-    `
+        </tr>
+        `
     }
 }
+
 var cadastroCru = localStorage.getItem('cadastro')
 if (cadastroCru != null) {
     var cadastro = JSON.parse(cadastroCru);
@@ -65,28 +89,12 @@ function exclusaoDados() {
 
 
 
-//impressão do saldo final
-document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
-<th class="valor" style=" border-bottom:1px solid;">
-</th>
-<th class="mercadoria" style=" border-bottom:1px solid;">
-    Total
-</th>
-<th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
-  R$${saldo}
-</th>
-<th class="total" style=" border-bottom:1px solid;">
- </th>
-</tr>`
 
 
-for (valor of valores) {
-    saldo += valor.value
-}
-let saldo = 0;
 
+
+/////////////////////////////////////
 var botaofechar = document.getElementById('fechar');
-
 botaofechar.addEventListener('click', function () {
 
     var menu = document.getElementById('menu');
