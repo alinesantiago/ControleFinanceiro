@@ -1,9 +1,10 @@
 function desenhaCadastro() {
-
-    var saldo = [];
+    //saldo inicia zerado
+    var saldo = 0;
+    //percorre os itens do cadastro, como digito/tipo de transação e valor
     for (item in cadastro) {
-        let calculo =
-            parseFloat(cadastro[item].valor)
+        let calculo = parseInt(cadastro[item].valor)
+        //se for mais, soma - se for menos, subtrai
         if (cadastro[item].digito == "+") {
             saldo += calculo;
         } else {
@@ -11,6 +12,7 @@ function desenhaCadastro() {
         }
     }
 
+    //impressão do saldo final
     document.querySelector('tbody.extrato-resultado').innerHTML = ` <tr>
     <th class="valor" style=" border-bottom:1px solid;">
     </th>
@@ -24,10 +26,26 @@ function desenhaCadastro() {
     </th>
     </tr>`
 
+    //Notifica se saldo for 0
     if (cadastro.length == 0) {
         document.querySelector('table.info-extrato tbody.extrato-resultado').innerHTML =
             `<div> Nenhuma transação cadastrada.</div>`
     }
+
+    //impressão da parte fixa do saldo
+    document.querySelector('table.info-extrato tbody').innerHTML = ` <tr>
+    <th class="spacing" style=" border-bottom:1px solid;">
+
+    </th>
+    <th class="mercadoria" style=" border-bottom:1px solid;">
+        Mercadoria
+    </th>
+    <th class="valor" style=" border-bottom:1px solid;">
+       Valor
+    </th>
+    <th class="spacing" style=" border-bottom:1px solid;"> 
+     </th>
+    </tr>`
 
     for (central in cadastro) {
         document.querySelector('table.info-extrato tbody').innerHTML +=
@@ -41,7 +59,7 @@ function desenhaCadastro() {
         `
     }
 }
-
+//armazenamento no localStorage
 var cadastroCru = localStorage.getItem('cadastro')
 if (cadastroCru != null) {
     var cadastro = JSON.parse(cadastroCru);
@@ -51,7 +69,11 @@ if (cadastroCru != null) {
 
 ////////////////////////////////////////////////////////////////
 
+//mascara de real
+
+//função enviar dados
 function enviarDados(e) {
+    e.preventDefault();
     //enviando ao local storage
     cadastro.push({
         digito: e.target.elements['transacao'].value,
