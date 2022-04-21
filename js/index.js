@@ -1,4 +1,5 @@
 function desenhaCadastro() {
+
     //saldo inicia zerado
     var saldo = 0;
     //percorre os itens do cadastro, como digito/tipo de transação e valor
@@ -58,7 +59,11 @@ function desenhaCadastro() {
         </tr>
         `
     }
+
+
 }
+
+
 //armazenamento no localStorage
 var cadastroCru = localStorage.getItem('cadastro')
 if (cadastroCru != null) {
@@ -67,11 +72,10 @@ if (cadastroCru != null) {
     var cadastro = [];
 }
 
+
 ////////////////////////////////////////////////////////////////
 
-//mascara de real
-
-//função enviar dados
+//função enviar dados.................................................
 function enviarDados(e) {
     e.preventDefault();
     //enviando ao local storage
@@ -82,12 +86,10 @@ function enviarDados(e) {
     })
     localStorage.setItem("cadastro", JSON.stringify(cadastro));
     desenhaCadastro();
-    console.log(cadastro)
 }
 
 
-
-//Excluindo dados
+//Excluindo dados.....................................................................................................
 function limparDados() {
     //testa quantidade, se diferente de 0 executa a função limpeza de dados, se não, alerta a inexistencia deles
     if (cadastro != 0 && window.confirm("Deseja excluir os dados?")) {
@@ -97,7 +99,7 @@ function limparDados() {
     }
 }
 
-//Exclusão de dados
+//Exclusão de dados.......................................................
 function exclusaoDados() {
     for (element of document.querySelectorAll(".conteudo-dinamico")) {
         element.remove();
@@ -110,12 +112,7 @@ function exclusaoDados() {
 }
 
 
-
-
-
-
-
-/////////////////////////////////////
+//Fechar e abrir menu.................................................
 var botaofechar = document.getElementById('fechar');
 botaofechar.addEventListener('click', function () {
 
@@ -124,6 +121,8 @@ botaofechar.addEventListener('click', function () {
     menu.classList.toggle('hiden');
 
 });
+
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 desenhaCadastro() 
