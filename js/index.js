@@ -6,6 +6,8 @@ function desenhaCadastro() {
     for (item in cadastro) {
         let calculo = parseInt(cadastro[item].valor)
         //se for mais, soma - se for menos, subtrai
+        console.log(new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(cadastro[item].valor));
+
         if (cadastro[item].digito == "+") {
             saldo += calculo;
         } else {
@@ -21,7 +23,7 @@ function desenhaCadastro() {
     Total
     </th>
     <th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
-    R$${saldo}
+    ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(saldo)}
     </th>
     <th class="total" style=" border-bottom:1px solid;">
     </th>
@@ -48,20 +50,21 @@ function desenhaCadastro() {
      </th>
     </tr>`
 
+      
     for (central in cadastro) {
         document.querySelector('table.info-extrato tbody').innerHTML +=
             `
         <tr class="conteudo-dinamico">
         <td class="digito" > ${cadastro[central].digito} </td>
         <td class="mercadoria"> ${cadastro[central].mercadoria} </td>
-        <td class="valor"> R$${cadastro[central].valor} </td>
+        <td class="valor"> ${cadastro[central].valor} </td>
         <th class="valor2" style=" border-bottom:1px solid;"> </th>
         </tr>
         `
     }
 
-
 }
+
 
 
 //armazenamento no localStorage
@@ -122,6 +125,8 @@ botaofechar.addEventListener('click', function () {
 
 });
 
+// Digamos que a gente tenha o seguinte número
+const money = 1234567.89;
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <Title> Controle Financeiro </Title>
     <link rel="stylesheet" href="./assets/formulario.css">
@@ -13,21 +14,21 @@
 
     <header class="header" style="width: 100%;">
         <div style="width: 1100px;display: flex;justify-content: space-around;">
-                    <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
-                <div class="controlefinanceiro"> Controle financeiro </div>
+            <div class="img-menu"> <img src="./assets/img/elipse.png"> </div>
+            <div class="controlefinanceiro"> Controle financeiro </div>
             <div class="menu" id="menu">
                 <div class="fechar" id="fechar"> <img src="./assets/img/fechar.png"></div>
                 <div class="cadastro">Cadastro de transações</div>
                 <div class="divisor">|</div>
                 <div class="limpar" onclick="limparDados()">Limpar dados</div>
-            </div> 
+            </div>
             <div class="menu-hamburguer"> <img src="./assets/img/hamburguer.png" style="width: 40px;"> </div>
         </div>
     </header>
 
     <div class="corpo">
         <form class="formulario" onsubmit="enviarDados(event)">
-            
+
             <b class="nova-transacao" style="padding-bottom: 10px;"> Nova transação</b>
             <div class="campo1">
                 <div class="novatransacao" style="padding-bottom: 10px;"> Tipo de transação </div>
@@ -38,16 +39,17 @@
             </div>
             <div class="campo2">
                 <div class="nomedamercadoria" style="padding-bottom: 10px;"> Nome da Mercadoria</div>
-                <input type="text" required placeholder=" Input" ; name="NomeDaMercadoria" id="nomemercadoria">
+                <input type="text" required placeholder=" Input" ; name="NomeDaMercadoria" id="nomemercadoria"
+                    class="valor1">
             </div>
 
             <div class="campo1" style="padding-bottom: 10px;">
-                <div class="valor" style="padding-bottom: 10px; padding-left: 0;" > Valor</div>
-                <input type="text" required  placeholder=" R$ 0,00" name="ValorDaMercadoria" id="valormercadoria">
+                <div class="valor" style="padding-bottom: 10px; padding-left: 0;"> Valor</div>
+                <input type="text" required placeholder=" R$ 0,00" name="ValorDaMercadoria" id="valormercadoria">
             </div>
 
             <div class="campo3" style="padding-bottom: 10px;">
-                <input type="submit"  class="adicionar" return-false id="enviar-dados" value="Adicionar transação">
+                <input type="submit" class="adicionar" return-false id="enviar-dados" value="Adicionar transação">
             </div>
 
         </form>
@@ -59,16 +61,16 @@
                 <tbody>
                     <tr>
                         <th class="spacing" style=" border-bottom:1px solid;">
-                    
+
                         </th>
                         <th class="mercadoria" style=" border-bottom:1px solid;">
                             Mercadoria
                         </th>
                         <th class="valor" style=" border-bottom:1px solid;">
-                           Valor
+                            Valor
                         </th>
-                        <th class="spacing" style=" border-bottom:1px solid;"> 
-                         </th>
+                        <th class="spacing" style=" border-bottom:1px solid;">
+                        </th>
                     </tr>
                 </tbody>
                 <br>
@@ -80,10 +82,10 @@
                             Total
                         </th>
                         <th class="valor" id="resultadofinal" style=" border-bottom:1px solid;">
-                          R$350,00
+                            R$350,00
                         </th>
                         <th class="total" style=" border-bottom:1px solid;">
-                         </th>
+                        </th>
                     </tr>
                 </tbody>
             </table>
@@ -93,7 +95,18 @@
 
 
     <script src="js/index.js"></script>
-   
+    <script src="'js/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#valormercadoria').mask('#,##0,00', { reverse: true });
+        });</script>
+
+
+
+
 </body>
 
 </html>
